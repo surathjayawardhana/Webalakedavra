@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table{
+                border-collapse: collapse;
+                width: 50%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th,td{
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background-color: grey;
+            }
+
+            .y {
+                width: 80%;
+            }
+
+            form {
+                margin-left: 200px;
+                margin-right: auto;
+                text-align: left;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: block;
+                background-color: gainsboro;
+                padding: 20px;
+
+            }
+            form input,select,textarea{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid gray;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+
+            <h2>Student Examination Results</h2>
+            <table class="x">
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Web Development</th>
+                    <th>Programming</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>S001</td>
+                    <td>Amal</td>
+                    <td>78</td>
+                    <td>82</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>S002</td>
+                    <td>Nimal</td>
+                    <td>65</td>
+                    <td>71</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>S003</td>
+                    <td>Kasuni</td>
+                    <td>88</td>
+                    <td>91</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>S004</td>
+                    <td>Dinuka</td>
+                    <td>55</td>
+                    <td>60</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>S005</td>
+                    <td>Shehani</td>
+                    <td>72</td>
+                    <td>68</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total Number of Students</td>
+                    <td>5</td>
+                </tr>
+            </table>
+            <h2>My Weekly Class Timetable.</h2>
+            <table class="y">
+                <tr>
+                    <th>Day</th>
+                    <th>9.00–10.00</th>
+                    <th>10.00–11.00</th>
+                    <th>11.00–12.00</th>
+                    <th>1.00–3.00</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td colspan="2">Programming</td>
+                    <td>Mathematics</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Programming</td>
+                    <td>Database</td>
+                    <td>English</td>
+                    <td>Lab Session</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Programming</td>
+                    <td>Database</td>
+                    <td>English</td>
+                    <td>Lab Session</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td colspan="2">Lab Session</td>
+                    <td>Mathematics</td>
+                    <td>Database</td>
+                </tr>
+              
+            </table><br><br>
+
+            <div>
+                <h1>Student Registration Form</h1>
+                <form>
+                    <div>
+                        <label>Student Name</label>
+                        <input type="text" placeholder="Jon Doe">
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <input type="text"  placeholder="18">
+                    </div>
+                    <div>
+                        <label>Email Address</label>
+                        <input type="email"  placeholder="jon.d@ahawalmail.com">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" placeholder="********">
+                    </div>
+                    <div class="d">
+                        <label>Gender</label><br>
+                        Male: <input type="radio" style="all:revert;">
+                        Female: <input type="radio" style="all:revert;">
+                    </div>
+                    <div>
+                        <label>Course</label>
+                        <select>
+                            <option>Information Technology</option>
+                            <option>Computer Science</option>
+                            <option>Data Science</option>
+                            <option>Software Engineering</option>
+                        </select>
+                    </div>
+                    <div >
+                        <label>Skills</label><br>
+                        <input type="checkbox" style="all:revert; margin-left: 20px;"> :HTML<br>
+                        <input type="checkbox" style="all:revert; margin-left: 20px;"> :CSS<br> 
+                        <input type="checkbox" style="all:revert; margin-left: 20px;"> :JavaScript<br>
+                        <input type="checkbox" style="all:revert; margin-left: 20px;"> :Python<br>
+                    </div>
+                    <div>
+                        <label>Address</label><br>
+                        <textarea rows="5"  placeholder="221B Baker Street, London NW1 6XE, United Kingdom"></textarea>
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                    </div>
+                    <div>
+                        <button>Reset</button>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+    </body>
+</html>

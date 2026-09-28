@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    background-color:#F5F7FB;
+    color: darkblue;
+}
+
+header{
+    background: linear-gradient(
+        150deg,
+        black,rgb(201, 1, 201),darkblue
+        );
+    color: white ;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header a{
+    color: white;
+    border-radius: 50%;
+    border: 2px;
+}
+header a:hover{
+    background-color: white;
+    color: blue;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+header a :active{
+    color: white;
+    background-color: darkblue;
+
+}
+
+.Buttons{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-left: 10px;
+
+}
+
+main{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    height: auto;
+    min-height: 700px;
+
+}
+
+.master{
+    display: flex;
+    background: linear-gradient(
+        white,
+        aliceblue
+    );
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px rgb(102, 102, 102);
+}
+
+.master Button{
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border: solid 1px blue;
+    background-color: blue;
+    font-weight: bold;
+
+}
+
+.master button:hover{
+    background-color: rgb(255, 255, 255);
+    color: blue;
+}
+
+#mmm{
+    width: 400px;
+    border-radius: 18px;
+    box-shadow: 10px 10px 20px gray;
+    transition: 1s;
+    animation: floating 1s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-10px)
+    }
+    10%{
+        transform: translateY(0);
+    }
+
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    background: linear-gradient(
+        150deg,
+        rgb(20, 34, 56),
+        rgb(0, 0, 36)
+    );
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.cards section{
+    background: linear-gradient(
+        white,
+        aliceblue
+    );
+    align-items: center;
+    padding: 20px;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0 1px 10px gray;
+    margin-bottom: 10px;
+}
+
+.cards section:hover{
+    border: 2px solid blue;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px gray;
+
+
+}
+
+section{
+    flex: 1;
+}
+
+.mas{
+    display: block;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 10px gray;
+    padding: 20px ;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+
+.mas table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+.mas th{
+    background-color: rgb(19, 22, 63);
+    color: white;
+}
+
+.mas td,th{
+    border: 1px solid gainsboro;
+    padding: 10px;
+
+}
+
+#vid{
+    background-color: black;
+}
+
+.mas input,textarea,select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+
+
+.mas button{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(0, 60, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+.con div{
+    display: block;
+    box-shadow: 0 1px 10px gray;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    color: black;
+
+}
+
+.con iframe{
+    width: 100%;
+}
+.cont{
+    display: -webkit-inline-flex;
+    box-shadow: 0 1px 10px gray; 
+}
+.con img{
+    width: 50px;
+}
+
+.con .co{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
