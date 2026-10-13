@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="clicker" value="Calculate Cost"style="padding: 10px; border: 1px gray solid; border-radius: 18px;" onclick="dismg() ">
+
+    <script>
+        function dismg (){
+            let vp = window.prompt("price of Vegiterble : ");
+            let dp = window.prompt("Price of Drink : ");
+            let sum = dp+vp
+            document.getElementById("<h2>price of Vegiterble : " + vp + "<\h2><br>").innerHTML = vp
+            document.getElementById("<h2>Price of Drink : " + dp + "<\h2><br>").innerHTML = dp
+            document.getElementById("<h2>Total Cost : " + sum + "<\h2>").innerHTML = sum
+            
+        }
+    </script>
+</body>
+</html>

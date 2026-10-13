@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Sheet #5</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        main{
+            display: grid;
+            justify-content: center;
+            height: 120vh;
+            margin: 2rem;
+        }
+
+        .hero{
+            display: block;
+            
+        }
+
+        .hero form .c1 label,
+        .hero form .c1 input{
+            display: block;
+            margin: 5px;
+            padding: 10px;
+            width: 80%;
+
+        }
+        .p2{
+            display: grid;
+            flex-direction: column;
+            margin: 5px;
+            padding: 10px;
+            
+
+        }
+
+        .hero form .c2 select{
+            padding: 10px;
+            width: 150px;
+            margin: 10px;
+        }
+        
+        fieldset{
+            width: 600px;
+            border: 1px solid gray;
+            border-radius: 18px;
+        }
+        .bbt{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        #r{
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 18px;
+        }
+        #c{
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+    <div class="hero">
+        <form>
+            <div class="c1">
+            <fieldset>
+                <legend>Personal Details</legend>
+
+
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe">
+
+                <label>Email Address</label>
+                <input type="email" placeholder="sherlock.h@london.uk">
+
+                <label>Phone Number</label>
+                <input type="text" placeholder="1-800-273-8255">
+
+                <label>Date of Birth</label>
+                <input type="date"> 
+            </fieldset>
+            </div>
+
+            <div class="c2">
+            <fieldset >
+                <legend>Membership Details</legend>
+
+                <label>Membership Plan</label><br>
+                <select>
+                    <option virtualkeyboardpolicy="">--Select Plan--</option>
+                </select><br>
+                <div class="check">
+                <label>Duration</label><br>
+                <input type="radio" name="Duration">1 Month
+                <input type="radio" name="Duration">3 Month
+                <input type="radio" name="Duration">6 Month
+                <input type="radio" name="Duration">12 Month<br>
+
+                <label>Add-on Facilities</label><br>
+                <input type="checkbox" name="Add-on Facilities"> Swimming Pool
+                <input type="checkbox" name="Add-on Facilities"> Sauna
+                <input type="checkbox" name="Add-on Facilities"> Personal Trainer<br>
+
+                <label>Health Goals</label><br>
+                <textarea rows="5"></textarea><br>
+                </div>
+            </fieldset>
+                <label>I agree to the gym rules and regulations</label>
+                <input type="checkbox" required><br>
+
+            </div>
+        </form>
+
+        <div class="bbt">
+        <button type="submit" id="r">Reguster</button>
+        <button type="reset" id="c">Clear Form</button>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

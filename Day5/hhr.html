@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+        .hero{
+            display: flex;
+            align-items: center;
+        }
+        .hero form label, input, textarea, select, button{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .hero form{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <form>
+            <fieldset name="Patient Infomations">
+            <legend>Patient Infomations</legend>
+            <label>Name</label>
+            <input id="in1" type="text" placeholder="Jon Doe"><br>
+            <label>Address</label>
+            <textarea id="in2"></textarea><br>
+            <label>Birth Day</label>
+            <input id="in3" type="date"><br>
+            <label>age</label>
+            <input id="in4" type="text"><br>
+            <label>Gender</label>
+            Male<input id="in5" type="radio" name="gender">
+            Female<input id="in6" type="radio" name="gender"><br>
+            <label>Disease</label>
+            <select id="in7">
+                <option value="">Hi</option>
+                <option>Hello</option>
+                <option>Hey</option>
+            </select><br>
+            <label>E-mail</label>
+            <input id="in8" type="email"><br>
+            <label>PIN</label>
+            <input id="in9" type="number"><br>
+            <button type="button" onclick="validateform()">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function validateform() {
+
+            let name = document.getElementById("in1").value
+            let address = document.getElementById("in2").value
+            let dob = document.getElementById("in3").value
+            let age = document.getElementById("in4").value
+            let male = document.getElementById("in5").checked
+            let female = document.getElementById("in6").checked
+            let disease = document.getElementById("in7").value
+            let email = document.getElementById("in8").value
+            let pin = document.getElementById("in9").value
+
+            if (name.trim() === ""){
+                window.alert("Fill your name before submit")
+                return false;
+            }
+            if (address.trim() === ""){
+                window.alert("Fill your address before submit")
+                return false;
+            }
+            if (dob === ""){
+                window.alert("Select your birth day")
+                return false;
+            }
+            if (age.trim() === "" || isNaN(age) || age < 0 || age > 120){
+                window.alert("Add a valid age")
+                return false;
+            }
+            if (!male && !female){
+                window.alert("Select your gender")
+                return false;
+            }
+            if (disease === ""){
+                window.alert("Select a disease")
+                return false;
+            }
+            if (!/^\S+@\S+\.\S+$/.test(email)){
+                window.alert("Add a valid e-mail")
+                return false;
+            }
+            if (!/^\d{4}$/.test(pin)){
+                window.alert("PIN must be 4 digits")
+                return false;
+            }
+
+            let gender = male ? "Male" : "Female"
+
+            window.alert("Patient Information : " + name + "\n"
+                        + "Address : " + address + "\n"
+                        + "Birth Day : " + dob + "\n"
+                        + "Age : " + age + "\n"
+                        + "Gender : " + gender + "\n"
+                        + "Disease : " + disease + "\n"
+                        + "E-mail : " + email)
+        }
+
+    </script>
+    
+</body>
+</html>

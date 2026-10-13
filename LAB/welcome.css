@@ -1,0 +1,42 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+}
+
+header{
+    background-color: gainsboro;
+    text-align: center;
+    margin-top: 0;
+    padding:5%;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    margin: 10%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 5%;
+    margin-bottom: 200px;
+}
+
+#dd{
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+button{
+    width: 10%;
+    height: 5%;
+    padding: 20px;
+    border: 1px gray solid;
+    margin-bottom: 10%;
+    border-radius: 30px
+}

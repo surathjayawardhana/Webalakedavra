@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ticket = 50;
+        let type = Number(window.prompt("Type of ticket ( Normal = 0 / VIP = 1 ) : "));
+        let notic = Number(window.prompt("How many Tickets do you want : "));
+
+        if (type === 1 || (ticket*notic) >= 500){
+
+            window.alert("You Got The Discout")
+            document.write("You got the Discount")
+        } else{
+            window.alert("You Did not Got The Discout")
+            document.write("You Did not got the Discount")
+        }
+
+
+    </script>
+    <script>
+
+        let tshirt = 200;
+        var jeans = 300;
+
+        let tcount = 30;
+        let jcount = 20;
+
+        let TItem = tcount + jcount;
+
+        let Tcost = (tshirt*tcount)+(jeans*jcount);
+
+        window.alert("Total Revenue = " + Tcost +"\nTotal Items = " + TItem);
+
+        if (Tcost > 10000){
+            window.alert("You Got The Discout")
+        } else{
+            window.alert("You Did not Got The Discout")
+        }
+    </script>
+    <script>
+        let larea = Number(window.prompt("Enter the area of the land : "));
+
+        if (larea <= 100){
+            alert("Price is $10000")
+        }
+        else if (larea > 101 && larea < 200 ){
+            alert("Price is $12000")
+        }
+
+    </script>
+</body>
+</html>

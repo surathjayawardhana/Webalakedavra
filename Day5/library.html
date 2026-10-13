@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .my_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            box-shadow: 1px 1px 10px gray;
+            border-radius: 30px;
+            width: 30%;
+            padding: 20px;
+            margin-top: 3rem;
+        }
+
+        .my_list form input,label{
+            padding: 10px;
+            margin: 10px;
+            margin-left: 0px;
+        }
+
+        .my_list form input{
+            border: 1px solid gray;
+            border-radius: 18px;
+            margin: 10px;
+            margin-left: 0px;
+
+        }
+
+
+        .my_list button{
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: none;
+            border-radius: 18px;
+            background-color: blue;
+            color: white;
+        }
+
+        .my_list button:hover{
+            background-color: white;
+            border: 1px solid blue;
+            color: blue;
+        }
+
+        .my_list button:active{
+            background-color: black;
+            border: none;
+            color: white;
+        }
+
+        #output{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="my_list">
+        <form>
+            <label id="l01">Full Name</label><br>
+            <input id="i01" type="text" placeholder="Jon Doe"><br>
+            <label id="l02">Student ID</label><br>
+            <input id="i02" type="text" placeholder="42386"><br>
+            <label id="l03">Email</label><br>
+            <input id="i03" type="email" placeholder="surath.j@gmail.com"><br>
+            <label id="l04">Year of study :</label><br>
+            <input id="i04" type="date"><br>
+
+            <label id="l05">Membership Type</label><br><br>
+            <input id="i05/1" type="radio" name="h1">Standerd
+            <input id="i05/2" type="radio" name="h1">Primium<br><br>
+            <input id="i06" type="checkbox">
+            <label id="l06">Reseive Library Update</label><br>
+            <input id="i07" type="checkbox">
+            <label id="l07">Agree Library Rules</label><br><br>
+        </form>
+        <div class="my_button">
+            <button type="button" onclick="validateform()">Creare Membership</button>
+        </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        function validateform(){
+            let name = document.getElementById("i01").value
+            let sid = document.getElementById("i02").value
+            let email = document.getElementById("i03")
+            let yob = document.getElementById("i04").value
+            let Standerd = document.getElementById("i05/1").checked;
+            let Primium = document.getElementById("i05/2").checked;
+            let Update = document.getElementById("i06").checked;
+            let Agreement = document.getElementById("i07").checked;
+            let mid;
+
+            if (name.trim() === ""){
+                window.alert("Please Enter Full Name: before Submit !..")
+                return false;
+            }
+            if (!/^\d{5}$/.test(sid)){
+                window.alert("Please Enter Valid Student ID: before Submit !..")
+                return false;
+            }
+            if (!email.checkValidity()){
+                window.alert("Please Enter Valid Email: before Submit !..")
+                return false;
+            }
+            if (yob.trim() === ""){
+                window.alert("Please Select Your study Year before Submit !..")
+                return false;
+            }
+            if (Standerd === false && Primium === false){
+                window.alert("Please Select your membership Type before Submit !..")
+                return false;
+            }
+
+            if(Standerd=== true){
+                    mid = "Standerd"
+            }else{
+                    mid = "Primium"
+            }
+            if (Agreement === false){
+                window.alert("You have to agree to libiriy Rules before Submit !..")
+                return false;
+            }
+
+            document.getElementById("output").innerHTML = "Membership created successfully!<br>"
+                                                            +"Name: "+name +"<br>"
+                                                            +"Student ID: "+sid +"<br>"
+                                                            +"Membership type: "+mid
+
+
+        }
+    </script>
+</body>
+</html>

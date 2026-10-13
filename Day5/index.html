@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMart</title>
+
+    <style>
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .table_section{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 1px 1px 10px ghostwhite;
+            padding: 20px;
+            border-radius: 18px;
+            border: 1px solid gray;
+            margin: 2rem;
+        }
+        .table_section .table_01{
+            border: 1px solid gray;
+            margin: 1rem;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        .table_section .table_01 th,td{
+            border: 1px solid gray;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+        
+        button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            border-radius: 18px;
+            margin: 8px;
+            background-color: blue;
+            color: white;
+
+        }
+
+        button:hover{
+            background-color: white;
+            color: blue;
+            border: 1px solid blue;
+        }
+
+        button:active{
+            background-color: black;
+            border: none;
+            color: white;
+        }
+
+        .table_section .x_button{
+            display: flex;
+        }
+
+       
+
+        .list_info label,input,select{
+            padding: 10px;
+            margin: 5px;
+        }
+
+
+        .list_info input{
+            border-radius: 18px;
+            border: 1px solid gray;
+
+        }
+
+        .list_info fieldset{
+            border: 1px solid gray;
+            border-radius: 18px;
+        }
+
+        select{
+            border-radius: 18px;
+            border: 1px solid gray;
+            appearance: base-select;
+
+
+        }
+
+        select::picker(select){
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="table_section">
+        <h1>ElectroMart Electrical Shop</h1>
+        <small>Welcome to ElectroMart! Find quality Electrical products at affordable price</small>
+        <table class="table_01">
+            <tr>
+                <th colspan="4">ElectroMart Product Informations</th>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Offer</th>
+            </tr>
+            
+            <tr>
+                <td rowspan="2">Lighting</td>
+                <td>LED Bulb</td>
+                <td>Rs. 1,200</td>
+                <td>5% Off</td>
+            </tr>
+            <tr>
+                <td>LED Tube Light</td>
+                <td>Rs. 2,500</td>
+                <td>10% off</td>
+
+            </tr>
+            <tr>
+                <td>Electrical</td>
+                <td>Extension cord</td>
+                <td>Rs. 1,800</td>
+                <td>5% off</td>
+            </tr>
+
+
+
+            <tr>
+                <td colspan="4">maximum Purchaes Amount: Rs: 1,500</td>
+            </tr>
+
+        </table>
+        <div class="x_button">
+        <button id="sh">Shop Informations</button>
+        <button id="ck">Chack Budget</button>
+        <button id="cfp">Calculate Final Price</button>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("sh").onclick = function(){
+            window.alert("Shop Name: ElectroMart\n" +
+                "Minimum Purchase amount: 1500LKR \n" +
+                "Spacial Discount: Available\n"
+            )
+        }
+        document.getElementById("ck").onclick = function(){
+
+            let Budget = window.prompt("Enter Your Budget(LKR) : ")
+
+            if (Budget >= 1500){
+                window.alert("Your Budget Sufficient Purchase from ElectroMart!")
+            }else{
+                window.alert("Your Budget is below minimum required amount: ")
+            }
+        }
+        document.getElementById("cfp").onclick = function(){
+            let maxp = window.prompt("Enter your total Purchase amount : ")
+            let Discount;
+
+            if (maxp>=5000){
+                Discount = 0.15;
+                final_price = maxp - (maxp*Discount);
+                window.alert("Total Purchase amount : " + maxp+ "\n"
+                    +"Discount : " + Discount*100 + "%\n"
+                    +"Final Price = " +  final_price
+                )
+            }else if (5000>maxp && maxp>=3000){
+                Discount = 0.10;
+                final_price = maxp - (maxp*Discount);
+                window.alert("Total Purchase amount : " + maxp+ "\n"
+                    +"Discount : " + Discount*100 + "%\n"
+                    +"Final Price = " +  final_price)
+                }else if (3000>maxp && maxp>=2000){
+                    Discount = 0.05;
+                    final_price = maxp - (maxp*Discount);
+                    window.alert("Total Purchase amount : " + maxp+ "\n"
+                        +"Discount : " + Discount*100 + "%\n"
+                        +"Final Price = " +  final_price)
+                    }else if (2000>maxp){
+                        Discount = 0;
+                        final_price = maxp - (maxp*Discount);
+                        window.alert("Total Purchase amount : " + maxp+ "\n"
+                            +"Discount : " + Discount*100 + "%\n"
+                            +"Final Price = " +  final_price)
+                        }
+            }
+    </script>
+
+    <div class="list_info">
+        <form class="x_form">
+            <fieldset>
+                <legend>ElectroMart Customer Service Request</legend>
+                <label>Customer's Name : </label>
+                <input type="text" placeholder="Jon Doe" id="cname"><br>
+
+                <label>Product Quantity : </label>
+                <input type="number" placeholder="Ex: '8' " id="pq"><br>
+
+                <label>Contuct Numbers : </label>
+                <input type="tel" placeholder="1-800-273-8255" id="cn"><br>
+
+                <label>Product Category : </label>
+                <select id="pc">
+                    <option value="">--Select Category--</option>
+                    <option value="Lighting">Lighting</option>
+                    <option value="Hone Appliances">home Appliances</option>
+                    <option value="Electrical Accessories">Electrical Accessories</option>
+                    <option value="Power Tools">Power Tools</option>
+                </select>
+            </fieldset>
+            <button id="sr" type="button" onclick="validateform()">Submit Request</button>
+            <button id="clear" type="reset">Clear</button>
+        </form>
+    </div>
+
+    <script>
+
+        function validateform() {
+
+            let name = document.getElementById("cname").value
+            let pq = document.getElementById("pq").value
+            let cn = document.getElementById("cn").value
+            let pc = document.getElementById("pc").value
+
+            if (name.trim() === ""){
+                window.alert("Fill Your name befor Submit")
+                return false;
+            }
+            if (pq < 5){
+                window.alert("Least 5 items requered for submit")
+                return false;
+            }
+            if (!/^\d{9,}$/.test(cn)){
+                window.alert("Add Valid Contuct Numbers")
+                return false;
+            }
+            if (pc.trim() === ""){
+                window.alert("Select Product Category")
+                return false;
+            }
+
+            window.alert("Electric Customer Request : " + name +"\n"
+                        +"Product Quantity : " + pq + "\n"
+                        +"Contuct Numbers : " + cn +"\n"
+                        +"Product Category : " + pc 
+          )
+        }
+
+    </script>
+</body>
+</html>
